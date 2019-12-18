@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Registrate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <a style="font-size: 30px;" (click)="redirectLogin()" ><ion-icon name="arrow-dropleft"></ion-icon></a>
+    <ion-item no-lines>
+      <ion-icon name="contact" style="display: block; font-size: 6em; margin-left: auto; margin-right: auto;" ></ion-icon>
+    </ion-item>
+  </div>
+      <h4 id="titulos" style="color:#0951B8;text-align:center;">Nueva Cuenta</h4>
+      <div id="nuevaCuenta-container8">
+        <div id="nuevaCuenta-container7">
+            
+            <form [formGroup]="user" (ngSubmit)="signup()">
+              <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input formControlName="name" type="text" ></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                <ion-label position="floating">Apellido</ion-label>
+                <ion-input formControlName="last_name" type="text" ></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label position="floating">Correo</ion-label>
+                <ion-input formControlName="email" type="email"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input formControlName="password" type="password" ></ion-input>
+                <!--ion-input formControlName="password-confim" type="password" placeholder="Confirmar Contraseña"></ion-input-->
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Teléfono</ion-label>
+                <ion-input formControlName="phone" type="tel"></ion-input>
+              </ion-item>
+              <br>
+  <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-datetime 
+      formControlName="bornday" 
+      displayFormat="DD MMM YYYY" 
+      [max]="MaxDate"
+      placeholder="Día/Mes/Año" 
+      monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"></ion-datetime>
+    </ion-item>
+    
+              
+    
+    
+    <ion-item no-lines>
+      <ion-checkbox 
+      disabled=true
+      formControlName="conditions" 
+      item-left="" 
+      style="display:inline;text-align:center;" 
+      checked="false"></ion-checkbox>
+      <ion-label no-lines><h2 style="color:#0951B8;text-align:center;"> Aceptar Condiciones </h2></ion-label>
+    </ion-item>
+    
+    <ion-button 
+    no-lines 
+    color="default" 
+    style="color:rgb(90, 90, 90);float:right;" 
+    (click)="terminosyCondiciones()"
+    >Más Información</ion-button>
+    
+     
+    <ion-button 
+              round 
+              block
+              type="submit"
+              class="button button-positive button-block"
+              [disabled]="!user.valid"
+              >Continuar</ion-button>
+  </form>
+        </div>
+        
+      </div>
+  </ion-content>
