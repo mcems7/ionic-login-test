@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import * as Constants from '../../constants';
+import * as Constants from '../../../constants';
 
 @Component({
   selector: 'app-policies',

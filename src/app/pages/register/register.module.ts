@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { RegisterPageRoutingModule } from './register-routing.module';
 
-import { PoliciesPage } from '../../modals/policies/policies.page';
+import { PoliciesPage } from './policies/policies.page';
 import { RegisterPage } from './register.page';
 import { HttpClientModule } from '@angular/common/http';
 

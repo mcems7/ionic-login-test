@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 //import { AlertController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
-import { PoliciesPage } from '../../modals/policies/policies.page';
+import { PoliciesPage } from './policies/policies.page';
 import * as Constants from '../../constants';
 import * as moment from 'moment';
 import { UserService } from 'src/app/api/user.service';

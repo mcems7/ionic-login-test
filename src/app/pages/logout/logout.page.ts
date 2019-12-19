@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/api/user.service';
 
 @Component({
   selector: 'app-logout',
@@ -7,8 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router:Router,
+    private userService:UserService
+    ) {
 
+     }
+  routerLink(url){
+    this.router.navigate([url]);
+  }
+  confirmar() {
+    this.userService.logout();
+    this.routerLink('/home');
+  }
+  cancelar() {
+    this.routerLink('/list')
+  }
   ngOnInit() {
   }
 

@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>logout</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+<app-sidebarmenu></app-sidebarmenu>
+<ion-content id="content1" ion-content>
+  <ion-row class="ion-padding"  class="ion-text-center" >
+    <ion-col class="ion-text-center item-col" size="3" size-md></ion-col>
+    <ion-col class="ion-text-center item-col" size="6" size-md>
+      <ion-icon name="exit" style="font-size:4em;" class="center"></ion-icon>
+      <h4 class="item-menu" id="index-heading3">CERRRAR SESIÓN</h4>
+    </ion-col>
+    <ion-col class="ion-text-center item-col" size="3" size-md></ion-col>
+  </ion-row>
 
-<ion-content>
+<ion-row>
+<ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+<ion-col class="ion-text-center item-col" size="8" size-md>
+  <ion-button class="ion-text-center ion-padding ion-margin" block round center (click)="confirmar()">Confirmar</ion-button>
+</ion-col>
+<ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+</ion-row>
+
+<ion-row>
+    <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+    <ion-col class="ion-text-center item-col" size="8" size-md>
+      <ion-button class="ion-text-center ion-padding ion-margin" block round center (click)="cancelar()">Cancelar</ion-button>
+    </ion-col>
+    <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+    </ion-row>
 
 </ion-content>
