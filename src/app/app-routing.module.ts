@@ -26,6 +26,22 @@ const routes: Routes = [
   {
     path: 'slide',
     loadChildren: () => import('./slide/slide.module').then( m => m.SlidePageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'address',
+    loadChildren: () => import('./pages/address/address.module').then( m => m.AddressPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
   }
 ];
 

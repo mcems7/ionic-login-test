@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Nueva Dirección</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+      <form [formGroup]="addresses" (ngSubmit)="accept()">
+          <ion-item>
+            <ion-label position="floating">Dirección</ion-label>
+            <ion-input formControlName="address" type="text" ></ion-input>
+          </ion-item>
+
+          <ion-button round block type="submit" [disabled]="!addresses.valid" class="ion-float-right" >Aceptar</ion-button>
+        </form>
+        <ion-button round block class="ion-float-left" (click)="cancel()">Cancelar</ion-button>
+  </ion-content>
+  <ion-footer>
+  </ion-footer>

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<app-isauth></app-isauth>
+<app-sidebarmenu></app-sidebarmenu>
+
+<ion-content id="content1">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+    <ion-row class="ion-padding"  class="ion-text-center">
+    <ion-col class="ion-text-center item-col" size="4" size-md></ion-col>
+    <ion-col class="ion-text-center item-col" size="4" size-md>
+      <ion-icon name="pin" style="font-size:4em;" class="center"></ion-icon>
+      <h4 class="item-menu" id="index-heading3">DIRECCIÓN</h4>
+    </ion-col>
+    <ion-col class="ion-text-center item-col" size="4" size-md></ion-col>
+  </ion-row>
+  <ion-list>
+  <ion-item-sliding *ngFor="let item of items">
+      <ion-item >
+        <div class="item-note">
+          {{item.address}}
+        </div>
+      </ion-item>
+      <ion-item-options>
+          <!--ion-button color="primary">
+            <ion-icon name="create"></ion-icon>
+          </ion-button-->
+
+        <ion-button color="danger" (click)="borrar(item.id,item.address)">
+            <ion-icon  name="trash"></ion-icon>
+          </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+    </ion-list>
+</ion-content>
+<ion-footer class="ion-text-center">
+  <ion-button (click)="new_address()">Agregar dirección</ion-button>
+</ion-footer>

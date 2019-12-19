@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../api/user.service';
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private router:Router) { }
+  constructor(
+    private router:Router,
+    private userService:UserService
+    ) { }
 
   redirectLogin(){
     this.router.navigate(['login']);
@@ -17,5 +21,7 @@ export class HomePage {
     this.router.navigate(['slide']);
   }
   ngOnInit() {
+    
+    
   }
 }

@@ -3,3 +3,13 @@ Esta es una prueba de una aplicación con Ionic conectandose a un API REST de la
 La configuración inicial se encuentra en el archivo constats.example.ts y este archivo debe ser renombrado a constants.ts
 
 se debe ejecutar npm i para la descarga de los archivos necesarios de ionic
+
+Depencencias npm
+npm i laravel-passport
+
+Just install the momentJS
+    npm install moment --save
+And import in your .ts file, there is no need to import in your module.
+    import * as moment from 'moment'
+
+    npm i rxjs

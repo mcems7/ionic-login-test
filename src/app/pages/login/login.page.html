@@ -1,17 +1,79 @@
-<ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        Iniciar Sesión
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-  
-      <ion-button (click)="redirectRegister()">Crear cuenta</ion-button>
-  
+<app-sidebarmenu></app-sidebarmenu>
+<ion-content id="content1" class="ion-padding" class="has-header">
+    <div class="ion-padding">
+            <div>
+        
+             
+              <ion-item no-lines>
+          <ion-icon id="image" 
+          style="display: block; width: 40%; margin-left: auto; margin-right: auto; font-size: 4em;" 
+          name="person-add"
+          ></ion-icon>
+                </ion-item>
+        
+            </div>
+            <h4 id="titulos" style="color:#0951B8;text-align:center;">Regístrate </h4>
+            <div id="nuevaCuenta-container8">
+              <div id="nuevaCuenta-container7">
+              <br>
+        <br>
+        <br>
+        
+         
+      <form [formGroup]="user" (ngSubmit)="login()">
+        
+          <ion-item>
+              <ion-label position="floating">Correo</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" formControlName="password" ></ion-input>
+          </ion-item>
+          
+          <br>
+          <br>
+          <br>
+          <ion-row class="ion-padding" >
+
+              <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+              <ion-col class="ion-text-center item-col" size="8" size-md>
+                  <ion-button
+                  type="submit"
+                  color="azul" 
+                  round 
+                  block
+                  class="button button-positive button-block"
+                  color="primary"
+                  [disabled]="!user.valid"
+                  >
+                  Entrar
+                </ion-button>
+              </ion-col>
+              <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+            </ion-row>
+         
+      </form>
+      <ion-row class="ion-padding" >
+
+          <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+          <ion-col class="ion-text-center item-col" size="8" size-md>
+              <ion-button 
+        round
+        block
+        (click)="redirectRegister()"
+        class="button button-positive button-block"
+        color="primary">
+        Crear Cuenta
+      </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center item-col" size="2" size-md></ion-col>
+        </ion-row>
+        
+              </div>
+              
+            </div>
+        
+  </div>
   </ion-content>
   

@@ -31,3 +31,4 @@ npm-debug.log*
 /www
 /src/app/constants.ts
 git.sh
+compilar.sh
