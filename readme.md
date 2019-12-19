@@ -8,8 +8,12 @@ Depencencias npm
 npm i laravel-passport
 
 Just install the momentJS
-    npm install moment --save
+npm install moment --save
 And import in your .ts file, there is no need to import in your module.
-    import * as moment from 'moment'
+import * as moment from 'moment'
 
-    npm i rxjs
+npm i rxjs
+
+ionic cordova plugin add call-number
+npm install @ionic-native/call-number
+

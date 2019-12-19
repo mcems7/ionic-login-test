@@ -11,7 +11,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule,  
     ComponentsModule,
     FormsModule,
     IonicModule,

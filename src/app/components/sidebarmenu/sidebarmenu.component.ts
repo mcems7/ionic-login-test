@@ -114,7 +114,7 @@ export class SidebarmenuComponent implements OnInit {
       
     {
       title : "Contactar",
-      url   : "/contactenos",
+      url   : "/about",
       icon  : "svg/md-exit.svg"
     },
    
